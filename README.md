@@ -1,14 +1,15 @@
-# 🎨 Schema.org Visualizer - Interactive Graph Generator
+# 🎨 Schema Visualizer - Interactive JSON Graph Generator
 
 <div align="center">
 
-![Schema Visualizer Banner](https://img.shields.io/badge/Schema-Visualizer-purple?style=for-the-badge)
+![Schema Visualizer Banner](https://img.shields.io/badge/Schema-Visualizer-6366f1?style=for-the-badge)
 ![Python 3.7+](https://img.shields.io/badge/Python-3.7+-blue?style=for-the-badge&logo=python&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow?style=for-the-badge&logo=javascript&logoColor=white)
 ![MIT License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-**Transform your Schema.org JSON-LD markup into beautiful, interactive network graphs!**
+**Transform Schema.org markup or any JSON data into beautiful, interactive network graphs!**
 
-Built with ❤️ by [**Vibe Coders**](https://www.skool.com/ai-agent-vibe-engineers) - The AI Agent Engineering Community
+Built with ❤️ by Rabih Rizk for [**Vibe Coders**](https://www.skool.com/ai-agent-vibe-engineers) - The AI Agent Engineering Community
 
 [Join Vibe Coders](https://www.skool.com/ai-agent-vibe-engineers) · [Report Bug](https://github.com/yourusername/schema-visualizer/issues) · [Request Feature](https://github.com/yourusername/schema-visualizer/issues)
 
@@ -32,32 +33,101 @@ Built with ❤️ by [**Vibe Coders**](https://www.skool.com/ai-agent-vibe-engin
 
 ---
 
+## 🌟 NEW: Enhanced Web Interface with Dual Mode Support!
+
+**Want to get started instantly?** Simply open `index.html` in your browser - no installation needed!
+
+### ✨ Major Features
+
+#### 🔄 **Dual Visualization Modes**
+- **Schema.org Mode** - Specialized for Schema.org JSON-LD markup with type-specific coloring
+- **Generic JSON Mode** - Visualize ANY JSON structure (APIs, configs, databases, analytics)
+- Easy toggle switch between modes with dynamic examples
+
+#### 🌓 **Dark/Light Theme Support**
+- Professional light theme with neutral stone colors
+- Rich dark theme with charcoal palette
+- Instant theme switching with preference persistence
+- Auto-detects system theme preference
+
+#### 🎨 **Beautiful Modern Interface**
+- Modern dark slate header design
+- Smooth transitions and animations
+- Professional color palette (indigo primary colors)
+- Responsive layout that works on all screen sizes
+- Custom-styled components with proper contrast
+
+#### 📊 **Advanced Features**
+- ✅ Paste or upload JSON files directly
+- ✅ Real-time statistics and validation
+- ✅ Interactive graph visualization (zoom, pan, drag nodes)
+- ✅ Export visualizations as PNG images
+- ✅ Quick example library (8 examples total - 4 Schema, 4 Generic)
+- ✅ Toast notifications for user feedback
+- ✅ Keyboard shortcuts (Ctrl/Cmd + Enter to visualize)
+
+[👉 See Web Interface Guide](WEB_INTERFACE.md)
+
+For advanced users who prefer the command line, continue reading below for the CLI tool documentation.
+
+---
+
 ## 🎯 What is This?
 
-The **Schema Visualizer** is a powerful command-line tool that turns complex Schema.org structured data (JSON-LD) into **interactive, beautiful network graphs** that you can explore in your web browser.
+The **Schema Visualizer** is a versatile tool that transforms both Schema.org structured data (JSON-LD) and **any generic JSON data** into **interactive, beautiful network graphs** that you can explore in your web browser.
 
-Think of it as a "mind map generator" for your website's structured data!
+Think of it as a "mind map generator" for JSON data - whether it's website structured data, API responses, configuration files, or database exports!
+
+### 🌐 Two Ways to Use
+
+1. **🚀 Web Interface (ENHANCED!)** - Simply open `index.html` in your browser
+   - No installation required!
+   - **Dual Mode**: Schema.org or Generic JSON visualization
+   - Dark/Light theme toggle
+   - Paste or upload your data
+   - Instant visualization with beautiful modern UI
+   - [Learn more about the Web Interface →](WEB_INTERFACE.md)
+
+2. **💻 Command-Line Tool** - Powerful CLI for advanced users
+   - Generate visualizations from terminal
+   - Batch processing support
+   - Multiple output formats
+   - Full customization options
 
 ### Real-World Use Cases
 
+#### Schema.org Mode
 - **SEO Professionals**: Visualize and validate schema markup for clients
 - **Web Developers**: Debug complex schema relationships
 - **Content Creators**: Understand how different content pieces connect
 - **Digital Marketers**: Create visual reports of structured data implementations
-- **Students & Learners**: Study Schema.org concepts visually
+
+#### Generic JSON Mode
+- **API Developers**: Visualize complex API response structures
+- **DevOps Engineers**: Map configuration files and service dependencies
+- **Data Analysts**: Explore nested JSON data from databases
+- **WordPress Developers**: Visualize post meta, theme configs, and plugin data
+- **E-commerce Teams**: Map order structures, product catalogs, and inventory
+- **Marketing Teams**: Visualize analytics data and campaign structures
+- **Students & Learners**: Understand JSON data structures visually
 
 ---
 
 ## 🌟 Why Use This Tool?
 
-✅ **Zero Configuration** - Works out of the box with one command
-✅ **Interactive** - Drag, zoom, and explore your schema visually
-✅ **Beautiful Themes** - Choose from dark, light, or blue color schemes
+✅ **Dual Mode Support** - Schema.org AND Generic JSON visualization
+✅ **Zero Configuration** - Works out of the box, no installation needed
+✅ **Interactive** - Drag, zoom, and explore your data visually
+✅ **Beautiful Themes** - Modern dark/light theme toggle with professional colors
 ✅ **30+ Schema Types Supported** - Person, Product, Article, LocalBusiness, and more!
+✅ **Works with ANY JSON** - API responses, configs, databases, analytics
 ✅ **Multiple Layouts** - Force-directed, hierarchical, or circular arrangements
-✅ **Export Options** - Save as HTML or JSON for further analysis
+✅ **Export Options** - Save as PNG images or JSON for further analysis
+✅ **8 Built-in Examples** - Learn from real-world Schema.org and JSON examples
+✅ **Theme Persistence** - Remembers your dark/light theme preference
+✅ **Keyboard Shortcuts** - Ctrl/Cmd + Enter to visualize quickly
 ✅ **Beginner Friendly** - Clear error messages and helpful warnings
-✅ **Portable** - Self-contained, works anywhere Python runs
+✅ **Portable** - Self-contained, works anywhere (web browser or Python)
 
 ---
 
@@ -268,6 +338,7 @@ python schema_visualizer.py examples/article_schema.json --layout circular
 
 When you open the generated HTML file, you'll see:
 
+#### Schema.org Mode
 **Node Types:**
 - 🔴 **Large Colored Nodes** = Schema.org types (@type)
   - Example: Person, Product, Organization
@@ -281,11 +352,19 @@ When you open the generated HTML file, you'll see:
 - 🟡 **Orange** = Product/Offer
 - 🟣 **Purple** = Article/BlogPosting
 
+#### Generic JSON Mode
+**Node Types:**
+- 🔵 **Blue Nodes** = Objects (larger size)
+- 🟠 **Orange Nodes** = Arrays (medium size)
+- ⚪ **Gray Nodes** = Primitive values (smaller size)
+
 **Interactions:**
 - **Click & Drag** = Move nodes around
 - **Scroll** = Zoom in/out
 - **Hover** = See node details
 - **Click Node** = Highlight its connections
+- **Theme Toggle** = Switch between dark/light mode (top-right button)
+- **Mode Toggle** = Switch between Schema.org and Generic JSON modes
 
 ---
 
